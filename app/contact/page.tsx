@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 // components
 import ContactForm from "@/components/ContactForm";
+import { Suspense } from "react";
 
 const info = [
   {
@@ -42,7 +43,9 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <ContactForm />
+            <Suspense fallback={<div>Loading...</div>}>
+              <ContactForm />
+            </Suspense>
           </div>
 
           {/* info */}
