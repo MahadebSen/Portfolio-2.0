@@ -43,7 +43,7 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div>Loading contact form...</div>}>
               <ContactForm />
             </Suspense>
           </div>
