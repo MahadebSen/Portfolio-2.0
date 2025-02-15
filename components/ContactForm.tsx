@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -54,15 +54,9 @@ const ContactForm = () => {
     lastName: "",
     email: "",
     phone: "",
-    service: "",
+    service: paramValue,
     message: "",
   });
-
-  useEffect(() => {
-    if (paramValue) {
-      setFormData((prev) => ({ ...prev, service: paramValue }));
-    }
-  }, [paramValue]); // This will update the state when the param is available
 
   // Toast notification
   const handleToast = (message: string, isError: boolean) => {
