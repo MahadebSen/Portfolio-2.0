@@ -256,6 +256,7 @@ const ContactForm = () => {
 
         {/* textarea */}
         <Textarea
+          required={true}
           className="h-[200px]"
           value={formData.message}
           onChange={(e) =>
